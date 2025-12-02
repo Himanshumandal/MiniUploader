@@ -32,7 +32,7 @@ class FileUploader extends Controller
 
     public function postfileUploader(Request $request){
          $request->validate([
-            'zipfile' => 'required|mimes:zip|max:102400'
+            'zipfile' => 'required|mimes:zip'
         ]);
         // get the access token and set the access token to config
         // config(['filesystems.disks.google.accessToken'=>$this->fileservice->accessToken()]);
